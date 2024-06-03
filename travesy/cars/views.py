@@ -11,6 +11,11 @@ from django.http import JsonResponse
 #     context={'car_type':car_type,}
 #     return render(request, 'cars/car.html', context)
 
+
 def car_list(request):
-    cars = Car.objects.all()
-    return render(request, 'cars/car.html', {'car_type': cars})
+    car_type = Car.objects.all()
+    if request.method == "GET":
+        cn = request.GET.get("car_name")
+        if cn:
+            car_type = Car.objects.filter(name__icontains=cn)
+    return render(request, 'cars/car.html', {'car_type':car_type})

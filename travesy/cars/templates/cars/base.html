@@ -141,9 +141,18 @@
 
   
       <div id="card-container" class="container">
+        <div class="search text-center">
+            <p class="text-black font-bold">Search your Favourite car: </p>
+            <div>
+                <form method="GET">
+                    <input type="text" name="car_name" value="">
+                    <input type="submit" value="search" class="bg-blue-950 hover:bg-[#fd8d14] text-white text-md font-lg rounded-lg text-sm px-3 lg:px-4 py-2 lg:py-2.5 sm:mr-2 lg:mr-0  focus:outline-none ">
+                </form>
+            </div>
+        </div>
         {% block content %}
-        {% endblock content %}
-       </div>
+        {% endblock content %}
+      </div>
  
 
        <footer class="text-center text-surface/75 dark:bg-neutral-700 dark:text-white/75 lg:text-left bg-blue-950 text-white">

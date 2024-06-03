@@ -2396,6 +2396,11 @@ select {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.hover\:text-\[\#FD8D14\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(253 141 20 / var(--tw-text-opacity));
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
